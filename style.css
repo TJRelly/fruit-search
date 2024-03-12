@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:focus {
+  outline: none;
+}
+
+body {
+  /* lvh takes into account, extra UI elements on mobile devices */
+  height: 100lvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(245, 202, 28, 1) 25%,
+    rgba(223, 79, 0, 1) 100%
+  );
+}
+
+.search-container input,
+.search-container .suggestions {
+  background: linear-gradient(
+    90deg,
+    rgba(245, 202, 28, 1) 25%,
+    rgba(223, 79, 0, 1) 100%
+  );
+}
+
+.search-container input {
+  border: none;
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(223, 79, 0, 1);
+  width: 20rem;
+}
+
+ul {
+  display: none;
+}
+
+ul.has-suggestions {
+  display: block;
+  position: absolute;
+  width: 20rem;
+  border: 1px dashed rgba(223, 79, 0, 1);
+  border-top: none;
+}
+
+ul li {
+  list-style: none;
+  padding: 0.75rem;
+}
+
+ul li:hover {
+  cursor: pointer;
+  background: rgba(223, 79, 0, 1);
+}
